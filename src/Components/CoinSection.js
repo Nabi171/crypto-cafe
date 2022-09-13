@@ -11,9 +11,11 @@ const CoinSection = () => {
     return (
         <div>
             <h1>This is coin section</h1>
-            {
-                coins.map(coin => <ShowCard coin={coin}></ShowCard>)
-            }
+            <div className='row'>
+                {
+                    coins.map(coin => <ShowCard coin={coin} key={coin.id}></ShowCard>)
+                }
+            </div>
         </div>
     );
 };

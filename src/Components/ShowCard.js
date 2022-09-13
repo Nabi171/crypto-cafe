@@ -1,18 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
-const ShowCard = (coin) => {
+import '../Components/Showcard.css'
+const ShowCard = (props) => {
+    const { id, symbol, name, image } = props.coin;
     return (
-        <div>
-            <Card>
-                <Card.Img variant="top" src="holder.js/100px160" />
+        <div className='col-lg-4 gx-2 gy-2'>
+            <Card className='shadow'>
+                <Card.Img className='coins-image mx-auto mt-4' src={image} />
                 <Card.Body>
-                    <Card.Title>{coin.name}</Card.Title>
+                    <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit
-                        longer.
-              </Card.Text>
+                        <p><span className='fw-bold'>Symbol:</span>${symbol}</p>
+                    </Card.Text>
                 </Card.Body>
             </Card>
         </div>
