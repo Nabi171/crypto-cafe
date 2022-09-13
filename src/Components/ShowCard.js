@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import '../Components/Showcard.css'
-const ShowCard = (props) => {
-    const { id, symbol, name, image } = props.coin;
+
+const ShowCard = ({ coin, seeDetails }) => {
+    const { id, symbol, name, image } = coin;
     return (
         <div className='col-lg-4 gx-2 gy-2'>
             <Card className='shadow'>
@@ -11,6 +12,7 @@ const ShowCard = (props) => {
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
                         <p><span className='fw-bold'>Symbol:</span>${symbol}</p>
+                        <button className='btn btn-danger' > <link rel="stylesheet" href=""/> Details</button>
                     </Card.Text>
                 </Card.Body>
             </Card>
