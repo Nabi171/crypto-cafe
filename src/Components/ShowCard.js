@@ -7,7 +7,7 @@ const ShowCard = ({ coin }) => {
     const { id, symbol, name, image } = coin;
     return (
         <div className='col-lg-4 gx-2 gy-2'>
-            <Link>
+            <Link to={`/coindetails/${id}`}>
                 <Card className='shadow'>
                     <Card.Img className='coins-image mx-auto mt-4' src={image} />
                     <Card.Body>
